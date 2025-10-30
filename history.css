@@ -1,0 +1,132 @@
+/* Onboarding modal display and content */
+#onboarding-modal {
+  display: none;
+}
+#onboarding-modal[style*="display: block"] {
+  display: block !important;
+}
+.onboarding-modal-content {
+  max-width: 420px;
+}
+.onboarding-list {
+  margin: 1em 0 1.5em 1.2em;
+  padding: 0;
+  font-size: 1em;
+}
+/* Onboarding modal overrides */
+#onboarding-modal .modal-content {
+  max-width: 420px;
+}
+#onboarding-modal h2 {
+  margin-top: 0.2em;
+  font-size: 1.3em;
+}
+#onboarding-modal ul {
+  margin: 1em 0 1.5em 1.2em;
+  padding: 0;
+  font-size: 1em;
+}
+#onboarding-modal .modal-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 0.6em 1.4em;
+  border-radius: 3px;
+  font-size: 1em;
+  cursor: pointer;
+}
+#onboarding-modal .modal-btn:focus {
+  outline: 2px solid #222;
+}
+/* Hide import file input */
+#import-history {
+  display: none;
+}
+/* Filters bar styling */
+.history-filters {
+  margin-bottom: 14px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.history-filters input[type="text"] {
+  flex: 1;
+  min-width: 120px;
+  max-width: 180px;
+}
+.history-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.history-thumb {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  display: block;
+}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+.history-container {
+  background: #fff;
+  max-width: 340px;
+  margin: 20px auto;
+  padding: 24px 20px 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.history-container h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #111;
+  text-align: center;
+}
+#history-list {
+  margin-bottom: 18px;
+}
+.history-item {
+  background: #f7f7f7;
+  border-radius: 7px;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  color: #111;
+}
+.history-item .prediction {
+  font-weight: bold;
+  font-size: 15px;
+}
+.history-item .confidence {
+  color: #444;
+  font-size: 13px;
+}
+.history-item .timestamp {
+  color: #888;
+  font-size: 12px;
+  margin-top: 4px;
+}
+button {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 15px;
+  margin: 8px 0 0 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+button:hover {
+  background: #444;
+  color: #fff;
+  border: 1px solid #111;
+}

@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "DeepShield Detector",
+  "version": "1.2",
+  "description": "Analyzes images and videos for deepfakes by right-clicking.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "notifications",
+    "offscreen",
+    "storage"
+  ],
+  "host_permissions": ["http://127.0.0.1:5000/*", "http://192.168.1.14:5000/*", "<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-128.png"
+  },
+  "options_page": "settings.html",
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icon-128.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

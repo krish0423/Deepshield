@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DeepShield Analysis Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header img { width: 64px; height: 64px; }
+        .overall { text-align: center; margin-bottom: 30px; padding: 20px; border-radius: 8px; }
+        .real { background-color: #d4edda; color: #155724; }
+        .fake { background-color: #f8d7da; color: #721c24; }
+        .uncertain { background-color: #fff3cd; color: #856404; }
+        .confidence { font-size: 18px; font-weight: bold; }
+        .media-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .media-item { background: #f9f9f9; padding: 15px; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.1); }
+        .media-item img { max-width: 300px; max-height: 300px; border-radius: 4px; }
+        .media-item .overlay { position: relative; }
+        .media-item .heatmap { position: absolute; top: 0; left: 0; opacity: 0.6; pointer-events: none; }
+        .prediction { font-weight: bold; margin-top: 10px; }
+        .confidence-small { font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="icon-128.png" alt="DeepShield" />
+            <h1>DeepShield Analysis Results</h1>
+        </div>
+        <div id="content"></div>
+    </div>
+    <script src="results.js"></script>
+</body>
+</html>

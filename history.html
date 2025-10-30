@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeepShield Analysis History</title>
+  <!-- ...other head content... -->
+  <link rel="stylesheet" href="history.css" />
+</head>
+<body>
+  <!-- Onboarding Modal -->
+  <div id="onboarding-modal" class="modal">
+    <div class="modal-content onboarding-modal-content">
+      <span class="close" id="onboarding-close" tabindex="0" aria-label="Close tutorial">&times;</span>
+      <h2>Welcome to Analysis History</h2>
+      <ul class="onboarding-list">
+        <li>View all your past deepfake analyses here.</li>
+        <li>Use <b>search</b> and <b>filters</b> to quickly find results.</li>
+        <li>Click a result for detailed view (heatmap, metadata, etc).</li>
+        <li>Export or import your history as <b>CSV/JSON</b>.</li>
+        <li>All data is stored locally and private to you.</li>
+      </ul>
+      <button id="onboarding-gotit" class="modal-btn">Got it!</button>
+    </div>
+  </div>
+
+  <div class="history-container">
+    <h2>Analysis History</h2>
+    <div class="history-filters">
+      <label for="search-history" class="visually-hidden">Search history</label>
+      <input id="search-history" type="text" placeholder="Search..." title="Search history" />
+      <label for="filter-prediction" class="visually-hidden">Filter by prediction</label>
+      <select id="filter-prediction" title="Filter by prediction">
+        <option value="">All</option>
+        <option value="Real">Real</option>
+        <option value="Fake">Fake</option>
+        <option value="Uncertain">Uncertain</option>
+      </select>
+      <label for="filter-date" class="visually-hidden">Filter by date</label>
+      <input id="filter-date" type="date" title="Filter by date" placeholder="Date" />
+    </div>
+    <div id="history-list"></div>
+    
+    <div class="history-actions">
+      <button id="export-json">Export JSON</button>
+      <button id="export-csv">Export CSV</button>
+      <label for="import-history" class="visually-hidden">Import history file</label>
+      <input type="file" id="import-history" accept=".json,.csv" title="Import history file" />
+
+      <button id="import-btn">Import</button>
+      <button id="clear-history">Clear History</button>
+    </div>
+  </div>
+  <script src="history.js"></script>
+</body>
+</html>
